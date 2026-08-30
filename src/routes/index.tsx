@@ -485,7 +485,7 @@ function Landing() {
       </section>
 
       {/* BONUSES */}
-      <section className="relative px-4 py-24">
+      <section id="bonuses" className="relative scroll-mt-24 px-4 py-24">
         <div className="pointer-events-none absolute inset-0 -z-10 bg-[image:var(--gradient-surface)] opacity-80" />
         <div className="mx-auto max-w-5xl">
           <Reveal>
