@@ -29,6 +29,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { GlowCursor } from "@/components/GlowCursor";
 import { Reveal } from "@/components/Reveal";
 import { StickyCta } from "@/components/landing/StickyCta";
 import { CheckoutButton, CouponCode, FlowChips, SectionHeading } from "@/components/landing/shared";
