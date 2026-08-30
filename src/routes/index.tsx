@@ -522,6 +522,41 @@ function Landing() {
                 </p>
               </div>
             </Reveal>
+            <Reveal delay={240}>
+              <div className="surface-card relative h-full overflow-hidden rounded-3xl p-8">
+                <span className="absolute top-6 right-6 rounded-full bg-[image:var(--gradient-gold)] px-3 py-1 text-xs font-extrabold text-primary-foreground">
+                  FREE
+                </span>
+                <div className="flex size-12 items-center justify-center rounded-2xl border border-gold/30 bg-gold/10 text-gold">
+                  <Bot className="size-6" aria-hidden />
+                </div>
+                <p className="mt-4 text-xs font-bold tracking-[0.2em] text-gold uppercase">
+                  Bonus #03
+                </p>
+                <h3 className="mt-3 font-display text-2xl font-bold">Retailing AI Assistant</h3>
+                <p className="mt-1 text-sm text-muted-foreground line-through">Worth ₹1,999</p>
+                <p className="mt-5 text-sm leading-relaxed text-foreground/85">
+                  Your smart AI partner for better customer conversations. Get instant help with:
+                </p>
+                <ul className="mt-4 grid gap-2">
+                  {[
+                    "Objection handling",
+                    "WhatsApp replies",
+                    "Follow-ups",
+                    "Conversation starters",
+                    "Customer communication",
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-2 text-sm text-foreground/85">
+                      <Check className="mt-0.5 size-4 shrink-0 text-mint" aria-hidden />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+                <p className="mt-5 text-sm leading-relaxed text-muted-foreground">
+                  All based on practical, proven retailing strategies.
+                </p>
+              </div>
+            </Reveal>
           </div>
         </div>
       </section>
@@ -834,10 +869,10 @@ function Landing() {
                 THE RETAILING CODE
               </p>
               <p className="mt-2 text-center text-sm text-muted-foreground">
-                Course + 30-Day Planner + Scripts & Content Kit
-              </p>
-              <p className="mt-4 text-center text-xs font-bold tracking-[0.2em] text-gold uppercase">
-                Total Value: ₹5,497
+                 Course + 30-Day Planner + Scripts Kit + Retailing AI Assistant
+               </p>
+               <p className="mt-4 text-center text-xs font-bold tracking-[0.2em] text-gold uppercase">
+                Total Value: ₹7,496
               </p>
 
               <div className="mt-8 grid gap-4 sm:grid-cols-2">
