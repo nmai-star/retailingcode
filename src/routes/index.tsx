@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useEffect, useState } from "react";
 import {
   ArrowRight,
   BadgeCheck,
@@ -60,6 +61,47 @@ export const Route = createFileRoute("/")({
   }),
   component: Landing,
 });
+
+const introVideoParts = Array.from(
+  { length: 22 },
+  (_, index) => `/videos/website-intro-parts/part-${String(index).padStart(3, "0")}`,
+);
+
+function IntroVideo() {
+  const [videoUrl, setVideoUrl] = useState<string>();
+
+  useEffect(() => {
+    let objectUrl: string | undefined;
+    let cancelled = false;
+
+    Promise.all(introVideoParts.map((part) => fetch(part).then((response) => response.arrayBuffer())))
+      .then((parts) => {
+        if (cancelled) return;
+        objectUrl = URL.createObjectURL(new Blob(parts, { type: "video/mp4" }));
+        setVideoUrl(objectUrl);
+      })
+      .catch(() => setVideoUrl(undefined));
+
+    return () => {
+      cancelled = true;
+      if (objectUrl) URL.revokeObjectURL(objectUrl);
+    };
+  }, []);
+
+  return (
+    <video
+      className="aspect-video w-full bg-black object-contain"
+      controls
+      playsInline
+      preload="metadata"
+      poster="/videos/website-intro-poster.jpg"
+      aria-label="Introduction to The Retailing Code"
+      src={videoUrl}
+    >
+      Your browser does not support embedded videos.
+    </video>
+  );
+}
 
 const problems = [
   "You know your products… but don't know who to approach.",
@@ -299,17 +341,7 @@ function Landing() {
         <div className="mx-auto max-w-5xl">
           <Reveal>
             <div className="overflow-hidden rounded-3xl border border-gold/30 bg-black shadow-[var(--shadow-card)]">
-              <video
-                className="aspect-video w-full bg-black object-contain"
-                controls
-                playsInline
-                preload="metadata"
-                poster="/videos/website-intro-poster.jpg"
-                aria-label="Introduction to The Retailing Code"
-              >
-                <source src="/videos/website-intro.mp4" type="video/mp4" />
-                Your browser does not support embedded videos.
-              </video>
+              <IntroVideo />
             </div>
           </Reveal>
         </div>
