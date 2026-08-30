@@ -83,7 +83,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content:
           "Learn a practical retailing system for finding customers, starting conversations, generating enquiries, following up, creating repeat purchases and building referrals.",
       },
-      { name: "author", content: "Kranthi Kumar Velpuri" },
+      { name: "author", content: "Kranthi Velpuri" },
       { property: "og:title", content: "The Retailing Code | Build a Consistent Retailing System" },
       {
         property: "og:description",

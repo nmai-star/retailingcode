@@ -29,8 +29,8 @@ import {
 import { Reveal } from "@/components/Reveal";
 import { StickyCta } from "@/components/landing/StickyCta";
 import { CheckoutButton, CouponCode, FlowChips, SectionHeading } from "@/components/landing/shared";
-import courseHero from "@/assets/course-hero.jpg";
-import trainer from "@/assets/trainer.jpg";
+import productImage from "@/assets/retailing-code-product.png.asset.json";
+import trainerImage from "@/assets/kranthi-velpuri.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
