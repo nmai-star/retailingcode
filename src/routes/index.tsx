@@ -248,8 +248,8 @@ function Landing() {
           <Reveal delay={120} className="relative">
             <div className="absolute -inset-6 -z-10 rounded-[3rem] bg-gold/15 blur-3xl" />
             <img
-              src={courseHero}
-              alt="The Retailing Code digital course package with tablet and workbook"
+              src={productImage.url}
+              alt="The Retailing Code digital course package"
               width={1024}
               height={1024}
               className="w-full rounded-3xl border border-border shadow-[var(--shadow-card)]"
@@ -707,8 +707,8 @@ function Landing() {
           <Reveal className="relative">
             <div className="absolute -inset-4 -z-10 rounded-[2.5rem] bg-gold/12 blur-2xl" />
             <img
-              src={trainer}
-              alt="Kranthi Kumar Velpuri, trainer of The Retailing Code"
+              src={trainerImage.url}
+              alt="Kranthi Velpuri, trainer of The Retailing Code"
               loading="lazy"
               width={768}
               height={896}
@@ -720,7 +720,7 @@ function Landing() {
               Meet Your Trainer
             </p>
             <h2 className="mt-4 font-display text-3xl font-extrabold sm:text-4xl">
-              Learn With Kranthi Kumar Velpuri
+              Learn With Kranthi Velpuri
             </h2>
             <p className="mt-5 text-base leading-relaxed text-muted-foreground">
               The Retailing Code focuses on practical implementation rather than complicated theory.
@@ -864,7 +864,7 @@ function Landing() {
       </section>
 
       <footer className="border-t border-border px-4 py-10 text-center text-xs text-muted-foreground">
-        <p>© {new Date().getFullYear()} The Retailing Code — Kranthi Kumar Velpuri.</p>
+        <p>© {new Date().getFullYear()} The Retailing Code — Kranthi Velpuri.</p>
       </footer>
 
       <StickyCta />
