@@ -470,7 +470,7 @@ function Landing() {
           <Reveal>
             <SectionHeading eyebrow="Included Free" title={<>Join Now & Get These Bonuses FREE</>} />
           </Reveal>
-          <div className="mt-14 grid gap-6 md:grid-cols-2">
+          <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             <Reveal>
               <div className="surface-card relative h-full overflow-hidden rounded-3xl p-8">
                 <span className="absolute top-6 right-6 rounded-full bg-[image:var(--gradient-gold)] px-3 py-1 text-xs font-extrabold text-primary-foreground">
@@ -538,6 +538,7 @@ function Landing() {
                 ["The Retailing Code Course", "₹2,999"],
                 ["30-Day Retailing Action Planner", "₹999"],
                 ["Retailing Scripts & Content Kit", "₹1,499"],
+                ["Retailing AI Assistant", "₹1,999"],
               ].map(([name, price]) => (
                 <div
                   key={name}
@@ -555,7 +556,7 @@ function Landing() {
                   Total Value
                 </span>
                 <span className="font-display text-3xl font-extrabold text-gradient-gold">
-                  ₹5,497
+                  ₹7,496
                 </span>
               </div>
             </div>
