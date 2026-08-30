@@ -209,6 +209,19 @@ const faqs = [
 function Landing() {
   return (
     <main className="overflow-x-hidden pb-24">
+      {/* TOP OFFER BANNER */}
+      <section className="relative z-10 border-b border-gold/20 bg-[image:var(--gradient-surface)] px-4 py-4">
+        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 sm:flex-row">
+          <div className="flex items-center gap-2 text-sm font-bold text-gold">
+            <Flame className="size-4 animate-pulse" aria-hidden />
+            <span className="tracking-wide">Limited Launch Coupons — Copy & Use at Checkout</span>
+          </div>
+          <div className="flex flex-wrap items-center justify-center gap-3">
+            <CouponCode code="RETAIL60" className="text-sm" />
+            <CouponCode code="RETAIL40" className="text-sm" />
+          </div>
+        </div>
+      </section>
       {/* HERO */}
       <section className="relative isolate px-4 pt-16 pb-20 sm:pt-24">
         <div className="halo pointer-events-none absolute inset-x-0 top-0 -z-10 h-[600px]" />
