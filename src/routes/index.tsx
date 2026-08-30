@@ -435,7 +435,7 @@ function Landing() {
       </section>
 
       {/* WHAT YOU'LL LEARN */}
-      <section className="bg-surface/40 px-4 py-24">
+      <section id="lessons" className="bg-surface/40 px-4 py-24 scroll-mt-24">
         <div className="mx-auto max-w-6xl">
           <Reveal>
             <SectionHeading
