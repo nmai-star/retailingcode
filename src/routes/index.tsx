@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import {
   ArrowRight,
   BadgeCheck,
+  Bot,
   Brain,
   CalendarCheck,
   Check,
@@ -182,7 +183,7 @@ const faqs = [
   },
   {
     q: "What bonuses are included?",
-    a: "You'll receive the 30-Day Retailing Action Planner and the Retailing Scripts & Content Kit as included bonuses with the course offer.",
+    a: "You'll receive the 30-Day Retailing Action Planner, the Retailing Scripts & Content Kit, and the Retailing AI Assistant as included bonuses with the course offer.",
   },
   {
     q: "How do I use the launch coupon?",
