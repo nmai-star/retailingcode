@@ -29,6 +29,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { GlowCursor } from "@/components/GlowCursor";
 import { Reveal } from "@/components/Reveal";
 import { StickyCta } from "@/components/landing/StickyCta";
 import { CheckoutButton, CouponCode, FlowChips, SectionHeading } from "@/components/landing/shared";
@@ -253,6 +254,7 @@ const faqs = [
 function Landing() {
   return (
     <main className="overflow-x-hidden pb-24">
+      <GlowCursor />
       {/* TOP OFFER BANNER */}
       <section className="relative z-10 border-b border-gold/20 bg-[image:var(--gradient-surface)] px-4 py-4">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 sm:flex-row">
