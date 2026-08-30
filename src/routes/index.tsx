@@ -294,6 +294,27 @@ function Landing() {
         </div>
       </section>
 
+      {/* INTRO VIDEO */}
+      <section className="px-4 pb-20">
+        <div className="mx-auto max-w-5xl">
+          <Reveal>
+            <div className="overflow-hidden rounded-3xl border border-gold/30 bg-black shadow-[var(--shadow-card)]">
+              <video
+                className="aspect-video w-full bg-black object-contain"
+                controls
+                playsInline
+                preload="metadata"
+                poster="/videos/website-intro-poster.jpg"
+                aria-label="Introduction to The Retailing Code"
+              >
+                <source src="/videos/website-intro.mp4" type="video/mp4" />
+                Your browser does not support embedded videos.
+              </video>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       {/* PROBLEM */}
       <section className="px-4 py-20">
         <div className="mx-auto max-w-6xl">
