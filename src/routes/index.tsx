@@ -272,6 +272,26 @@ function Landing() {
         </div>
       </section>
 
+      {/* TOP LESSONS / BONUSES TOGGLES */}
+      <section className="sticky top-0 z-40 border-b border-gold/20 bg-background/90 px-4 py-3 backdrop-blur-md">
+        <div className="mx-auto flex max-w-2xl items-center justify-center gap-3">
+          <a
+            href="#lessons"
+            className="flex flex-1 items-center justify-center gap-2 rounded-full border border-gold/30 bg-gold/10 px-5 py-2.5 text-sm font-bold tracking-wide text-gold transition-all hover:bg-gold/20 active:scale-[0.98]"
+          >
+            <BookOpen className="size-4" aria-hidden />
+            5 Lessons
+          </a>
+          <a
+            href="#bonuses"
+            className="flex flex-1 items-center justify-center gap-2 rounded-full border border-gold/30 bg-gold/10 px-5 py-2.5 text-sm font-bold tracking-wide text-gold transition-all hover:bg-gold/20 active:scale-[0.98]"
+          >
+            <Gift className="size-4" aria-hidden />
+            3 Bonuses
+          </a>
+        </div>
+      </section>
+
       {/* PROBLEM */}
       <section className="px-4 py-20">
         <div className="mx-auto max-w-6xl">
