@@ -259,6 +259,24 @@ const faqs = [
   },
 ];
 
+const extraBonuses = [
+  {
+    title: "200 WhatsApp Retailing Scripts",
+    Icon: MessageSquare,
+    copy: "Ready-to-use scripts for starting conversations, handling objections, following up and closing sales on WhatsApp.",
+  },
+  {
+    title: "50 YouTube Content Ideas",
+    Icon: Youtube,
+    copy: "Plug-and-play video ideas designed to attract customer enquiries and build trust through long-form content.",
+  },
+  {
+    title: "50 Instagram Post Ideas",
+    Icon: Instagram,
+    copy: "Engaging post, reel and story ideas to keep your audience interested and drive consistent retailing conversations.",
+  },
+];
+
 function Landing() {
   return (
     <main className="overflow-x-hidden pb-24">
