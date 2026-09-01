@@ -674,6 +674,46 @@ function Landing() {
         </div>
       </section>
 
+      {/* EXTRA BONUSES */}
+      <section id="extra-bonuses" className="relative scroll-mt-24 px-4 py-24">
+        <div className="pointer-events-none absolute inset-0 -z-10 bg-[image:var(--gradient-surface)] opacity-80" />
+        <div className="mx-auto max-w-5xl">
+          <Reveal>
+            <SectionHeading
+              eyebrow="Extra Bonuses"
+              title={<>Retailing Growth Resource Pack</>}
+              subtitle="Worth ₹2,999 — Yours FREE when you join today"
+            />
+          </Reveal>
+          <div className="mt-14 grid gap-6 md:grid-cols-3">
+            {extraBonuses.map(({ title, Icon, copy }, i) => (
+              <Reveal key={title} delay={i * 100}>
+                <div className="surface-card relative h-full overflow-hidden rounded-3xl p-8">
+                  <span className="absolute top-6 right-6 rounded-full bg-[image:var(--gradient-gold)] px-3 py-1 text-xs font-extrabold text-primary-foreground">
+                    FREE
+                  </span>
+                  <div className="flex size-12 items-center justify-center rounded-2xl border border-gold/30 bg-gold/10 text-gold">
+                    <Icon className="size-6" aria-hidden />
+                  </div>
+                  <h3 className="mt-6 font-display text-xl font-bold leading-tight">{title}</h3>
+                  <p className="mt-4 text-sm leading-relaxed text-foreground/85">{copy}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+          <Reveal delay={200}>
+            <div className="mt-12 rounded-2xl border border-gold/30 bg-gold/10 p-6 text-center">
+              <p className="font-display text-lg font-bold">
+                Combined Extra Bonus Value: <span className="text-gradient-gold">₹2,999</span>
+              </p>
+              <p className="mt-2 text-sm text-muted-foreground">
+                These resources help you start conversations faster across WhatsApp, YouTube and Instagram.
+              </p>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       {/* VALUE STACK */}
       <section className="px-4 py-24">
         <div className="mx-auto max-w-2xl">
