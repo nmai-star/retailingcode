@@ -15,7 +15,6 @@ import {
   Layers,
   Mail,
   MessageSquare,
-  Phone,
   Repeat,
   Search,
   Share2,
@@ -253,7 +252,7 @@ const faqs = [
   },
   {
     q: "How can I get support?",
-    a: "Reach out via email at nmaisupport@gmail.com or WhatsApp at +91 77187 07024. Our team typically responds within 24-48 hours.",
+    a: "Reach out via email at nmaisupport@gmail.com or WhatsApp. Our team typically responds within 24-48 hours.",
   },
 ];
 
@@ -1008,13 +1007,13 @@ function Landing() {
             </a>
             <span className="hidden text-border sm:inline">|</span>
             <a
-              href="https://wa.me/9177187024"
+              href="https://tinyurl.com/484pkcpu"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 transition-colors hover:text-gold"
             >
-              <Phone className="size-4 text-gold" aria-hidden />
-              +91 77187 07024
+              <MessageSquare className="size-4 text-gold" aria-hidden />
+              Connect me on WhatsApp
             </a>
           </div>
           <p className="text-xs text-muted-foreground/70">
