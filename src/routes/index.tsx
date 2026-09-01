@@ -992,8 +992,31 @@ function Landing() {
         </div>
       </section>
 
-      <footer className="border-t border-border px-4 py-10 text-center text-xs text-muted-foreground">
-        <p>© {new Date().getFullYear()} The Retailing Code — Kranthi Velpuri.</p>
+      <footer className="border-t border-border px-4 py-10 text-center">
+        <div className="mx-auto flex max-w-xl flex-col items-center gap-4">
+          <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-muted-foreground">
+            <a
+              href="mailto:nmaisupport@gmail.com"
+              className="inline-flex items-center gap-2 transition-colors hover:text-gold"
+            >
+              <Mail className="size-4 text-gold" aria-hidden />
+              nmaisupport@gmail.com
+            </a>
+            <span className="hidden text-border sm:inline">|</span>
+            <a
+              href="https://wa.me/9177187024"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 transition-colors hover:text-gold"
+            >
+              <Phone className="size-4 text-gold" aria-hidden />
+              +91 77187 07024
+            </a>
+          </div>
+          <p className="text-xs text-muted-foreground/70">
+            © {new Date().getFullYear()} The Retailing Code — Kranthi Velpuri.
+          </p>
+        </div>
       </footer>
 
       <StickyCta />
