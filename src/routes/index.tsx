@@ -295,22 +295,32 @@ function Landing() {
         </div>
       </section>
 
-      {/* TOP LESSONS / BONUSES TOGGLES */}
+      {/* TOP LESSONS / BONUSES / EXTRA BONUSES TOGGLES */}
       <section className="sticky top-0 z-40 border-b border-gold/20 bg-background/90 px-4 py-3 backdrop-blur-md">
-        <div className="mx-auto flex max-w-2xl items-center justify-center gap-3">
+        <div className="mx-auto flex max-w-3xl items-center justify-center gap-2 sm:gap-3">
           <a
             href="#lessons"
-            className="flex flex-1 items-center justify-center gap-2 rounded-full border border-gold/30 bg-gold/10 px-5 py-2.5 text-sm font-bold tracking-wide text-gold transition-all hover:bg-gold/20 active:scale-[0.98]"
+            className="flex flex-1 items-center justify-center gap-1.5 rounded-full border border-gold/30 bg-gold/10 px-3 py-2.5 text-xs font-bold tracking-wide text-gold transition-all hover:bg-gold/20 active:scale-[0.98] sm:gap-2 sm:px-5 sm:text-sm"
           >
-            <BookOpen className="size-4" aria-hidden />
-            5 Lessons
+            <BookOpen className="size-3.5 sm:size-4" aria-hidden />
+            <span className="hidden sm:inline">5 Lessons</span>
+            <span className="sm:hidden">Lessons</span>
           </a>
           <a
             href="#bonuses"
-            className="flex flex-1 items-center justify-center gap-2 rounded-full border border-gold/30 bg-gold/10 px-5 py-2.5 text-sm font-bold tracking-wide text-gold transition-all hover:bg-gold/20 active:scale-[0.98]"
+            className="flex flex-1 items-center justify-center gap-1.5 rounded-full border border-gold/30 bg-gold/10 px-3 py-2.5 text-xs font-bold tracking-wide text-gold transition-all hover:bg-gold/20 active:scale-[0.98] sm:gap-2 sm:px-5 sm:text-sm"
           >
-            <Gift className="size-4" aria-hidden />
-            3 Bonuses
+            <Gift className="size-3.5 sm:size-4" aria-hidden />
+            <span className="hidden sm:inline">3 Bonuses</span>
+            <span className="sm:hidden">Bonuses</span>
+          </a>
+          <a
+            href="#extra-bonuses"
+            className="flex flex-1 items-center justify-center gap-1.5 rounded-full border border-gold/30 bg-gold/10 px-3 py-2.5 text-xs font-bold tracking-wide text-gold transition-all hover:bg-gold/20 active:scale-[0.98] sm:gap-2 sm:px-5 sm:text-sm"
+          >
+            <Zap className="size-3.5 sm:size-4" aria-hidden />
+            <span className="hidden sm:inline">Extra Bonuses</span>
+            <span className="sm:hidden">Extras</span>
           </a>
         </div>
       </section>
