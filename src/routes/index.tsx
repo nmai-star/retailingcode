@@ -1008,13 +1008,13 @@ function Landing() {
             </a>
             <span className="hidden text-border sm:inline">|</span>
             <a
-              href="https://tinyurl.com/484pkcpu"
+              href="https://wa.me/9177187024"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 transition-colors hover:text-gold"
             >
               <Phone className="size-4 text-gold" aria-hidden />
-              WhatsApp Support
+              +91 77187 07024
             </a>
           </div>
           <p className="text-xs text-muted-foreground/70">
