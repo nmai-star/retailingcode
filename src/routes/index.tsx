@@ -12,9 +12,11 @@ import {
   Flame,
   Gift,
   HeartHandshake,
+  Instagram,
   Layers,
   Mail,
   MessageSquare,
+  Play,
   Repeat,
   Search,
   Share2,
@@ -22,6 +24,7 @@ import {
   Sparkles,
   Users,
   Video,
+  Youtube,
   Zap,
 } from "lucide-react";
 import {
@@ -228,7 +231,7 @@ const faqs = [
   },
   {
     q: "What bonuses are included?",
-    a: "You'll receive the 30-Day Retailing Action Planner, the Retailing Scripts & Content Kit, and the Retailing AI Assistant as included bonuses with the course offer.",
+    a: "You'll receive the 30-Day Retailing Action Planner, the Retailing Scripts & Content Kit, the Retailing AI Assistant, and the Extra Bonuses including the Retailing Growth Resource Pack (200 WhatsApp Scripts, 50 YouTube Ideas & 50 Instagram Ideas).",
   },
   {
     q: "How do I use the launch coupon?",
@@ -256,6 +259,24 @@ const faqs = [
   },
 ];
 
+const extraBonuses = [
+  {
+    title: "200 WhatsApp Retailing Scripts",
+    Icon: MessageSquare,
+    copy: "Ready-to-use scripts for starting conversations, handling objections, following up and closing sales on WhatsApp.",
+  },
+  {
+    title: "50 YouTube Content Ideas",
+    Icon: Youtube,
+    copy: "Plug-and-play video ideas designed to attract customer enquiries and build trust through long-form content.",
+  },
+  {
+    title: "50 Instagram Post Ideas",
+    Icon: Instagram,
+    copy: "Engaging post, reel and story ideas to keep your audience interested and drive consistent retailing conversations.",
+  },
+];
+
 function Landing() {
   return (
     <main className="overflow-x-hidden pb-24">
@@ -274,22 +295,32 @@ function Landing() {
         </div>
       </section>
 
-      {/* TOP LESSONS / BONUSES TOGGLES */}
+      {/* TOP LESSONS / BONUSES / EXTRA BONUSES TOGGLES */}
       <section className="sticky top-0 z-40 border-b border-gold/20 bg-background/90 px-4 py-3 backdrop-blur-md">
-        <div className="mx-auto flex max-w-2xl items-center justify-center gap-3">
+        <div className="mx-auto flex max-w-3xl items-center justify-center gap-2 sm:gap-3">
           <a
             href="#lessons"
-            className="flex flex-1 items-center justify-center gap-2 rounded-full border border-gold/30 bg-gold/10 px-5 py-2.5 text-sm font-bold tracking-wide text-gold transition-all hover:bg-gold/20 active:scale-[0.98]"
+            className="flex flex-1 items-center justify-center gap-1.5 rounded-full border border-gold/30 bg-gold/10 px-3 py-2.5 text-xs font-bold tracking-wide text-gold transition-all hover:bg-gold/20 active:scale-[0.98] sm:gap-2 sm:px-5 sm:text-sm"
           >
-            <BookOpen className="size-4" aria-hidden />
-            5 Lessons
+            <BookOpen className="size-3.5 sm:size-4" aria-hidden />
+            <span className="hidden sm:inline">5 Lessons</span>
+            <span className="sm:hidden">Lessons</span>
           </a>
           <a
             href="#bonuses"
-            className="flex flex-1 items-center justify-center gap-2 rounded-full border border-gold/30 bg-gold/10 px-5 py-2.5 text-sm font-bold tracking-wide text-gold transition-all hover:bg-gold/20 active:scale-[0.98]"
+            className="flex flex-1 items-center justify-center gap-1.5 rounded-full border border-gold/30 bg-gold/10 px-3 py-2.5 text-xs font-bold tracking-wide text-gold transition-all hover:bg-gold/20 active:scale-[0.98] sm:gap-2 sm:px-5 sm:text-sm"
           >
-            <Gift className="size-4" aria-hidden />
-            3 Bonuses
+            <Gift className="size-3.5 sm:size-4" aria-hidden />
+            <span className="hidden sm:inline">3 Bonuses</span>
+            <span className="sm:hidden">Bonuses</span>
+          </a>
+          <a
+            href="#extra-bonuses"
+            className="flex flex-1 items-center justify-center gap-1.5 rounded-full border border-gold/30 bg-gold/10 px-3 py-2.5 text-xs font-bold tracking-wide text-gold transition-all hover:bg-gold/20 active:scale-[0.98] sm:gap-2 sm:px-5 sm:text-sm"
+          >
+            <Zap className="size-3.5 sm:size-4" aria-hidden />
+            <span className="hidden sm:inline">Extra Bonuses</span>
+            <span className="sm:hidden">Extras</span>
           </a>
         </div>
       </section>
@@ -643,6 +674,46 @@ function Landing() {
         </div>
       </section>
 
+      {/* EXTRA BONUSES */}
+      <section id="extra-bonuses" className="relative scroll-mt-24 px-4 py-24">
+        <div className="pointer-events-none absolute inset-0 -z-10 bg-[image:var(--gradient-surface)] opacity-80" />
+        <div className="mx-auto max-w-5xl">
+          <Reveal>
+            <SectionHeading
+              eyebrow="Extra Bonuses"
+              title={<>Retailing Growth Resource Pack</>}
+              subtitle="Worth ₹2,999 — Yours FREE when you join today"
+            />
+          </Reveal>
+          <div className="mt-14 grid gap-6 md:grid-cols-3">
+            {extraBonuses.map(({ title, Icon, copy }, i) => (
+              <Reveal key={title} delay={i * 100}>
+                <div className="surface-card relative h-full overflow-hidden rounded-3xl p-8">
+                  <span className="absolute top-6 right-6 rounded-full bg-[image:var(--gradient-gold)] px-3 py-1 text-xs font-extrabold text-primary-foreground">
+                    FREE
+                  </span>
+                  <div className="flex size-12 items-center justify-center rounded-2xl border border-gold/30 bg-gold/10 text-gold">
+                    <Icon className="size-6" aria-hidden />
+                  </div>
+                  <h3 className="mt-6 font-display text-xl font-bold leading-tight">{title}</h3>
+                  <p className="mt-4 text-sm leading-relaxed text-foreground/85">{copy}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+          <Reveal delay={200}>
+            <div className="mt-12 rounded-2xl border border-gold/30 bg-gold/10 p-6 text-center">
+              <p className="font-display text-lg font-bold">
+                Combined Extra Bonus Value: <span className="text-gradient-gold">₹2,999</span>
+              </p>
+              <p className="mt-2 text-sm text-muted-foreground">
+                These resources help you start conversations faster across WhatsApp, YouTube and Instagram.
+              </p>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       {/* VALUE STACK */}
       <section className="px-4 py-24">
         <div className="mx-auto max-w-2xl">
@@ -656,6 +727,7 @@ function Landing() {
                 ["30-Day Retailing Action Planner", "₹999"],
                 ["Retailing Scripts & Content Kit", "₹1,499"],
                 ["Retailing AI Assistant", "₹1,999"],
+                ["Retailing Growth Resource Pack", "₹2,999"],
               ].map(([name, price]) => (
                 <div
                   key={name}
@@ -668,19 +740,30 @@ function Landing() {
                   <span className="font-display font-bold">{price}</span>
                 </div>
               ))}
-              <div className="mt-6 flex items-center justify-between">
+              <div className="mt-6 flex items-center justify-between border-b border-gold/20 pb-6">
                 <span className="text-xs font-bold tracking-[0.2em] text-muted-foreground uppercase">
-                  Total Value
+                  Total Package Value
                 </span>
                 <span className="font-display text-3xl font-extrabold text-gradient-gold">
-                  ₹7,496
+                  ₹10,495
                 </span>
+              </div>
+              <div className="mt-6 flex flex-col items-center gap-3 text-center sm:flex-row sm:justify-between">
+                <div className="text-left">
+                  <p className="text-xs font-bold tracking-[0.2em] text-gold uppercase">
+                    Launch Offer Price
+                  </p>
+                  <p className="mt-1 font-display text-4xl font-extrabold text-foreground">₹2,299</p>
+                </div>
+                <div className="rounded-full bg-ember/10 px-4 py-2 text-sm font-bold text-ember">
+                  Save ₹8,196 (78% OFF)
+                </div>
               </div>
             </div>
           </Reveal>
           <Reveal delay={180}>
             <p className="mt-8 text-center font-display text-lg font-bold tracking-wide text-gold">
-              BUT THERE'S A LAUNCH OFFER…
+              LIMITED LAUNCH SLOTS — LOCK IN THE 78% OFF PRICE NOW
             </p>
           </Reveal>
         </div>
@@ -689,72 +772,60 @@ function Landing() {
       {/* LAUNCH OFFER */}
       <section className="relative px-4 py-24" id="offer">
         <div className="halo pointer-events-none absolute inset-x-0 top-0 -z-10 h-[500px]" />
-        <div className="mx-auto max-w-5xl">
+        <div className="mx-auto max-w-3xl">
           <Reveal>
             <SectionHeading
               eyebrow="Limited Launch Offer"
-              title={<>🔥 THE EARLIER YOU JOIN, THE MORE YOU SAVE.</>}
-              subtitle="We're rewarding the first 200 buyers with special launch coupons."
+              title={<>🔥 Get Everything for Just ₹2,299</>}
+              subtitle="Total package value ₹10,495 — you save ₹8,196 (78% OFF) when you join during the launch window."
             />
           </Reveal>
 
-          <div className="mt-14 grid gap-6 lg:grid-cols-2">
-            <Reveal>
-              <div className="glow-ring relative h-full rounded-3xl border border-gold/40 bg-[image:var(--gradient-surface)] p-8">
-                <span className="absolute -top-3 left-8 rounded-full bg-[image:var(--gradient-gold)] px-4 py-1 text-[11px] font-extrabold tracking-[0.15em] text-primary-foreground uppercase">
-                  Best Launch Offer
-                </span>
-                <p className="text-xs font-bold tracking-[0.2em] text-muted-foreground uppercase">
-                  First 100 Buyers
-                </p>
-                <p className="mt-3 font-display text-5xl font-extrabold text-gradient-gold">
-                  🔥 60% OFF
-                </p>
-                <p className="mt-6 text-xs font-semibold tracking-[0.2em] text-muted-foreground uppercase">
-                  Coupon Code
-                </p>
-                <CouponCode code="RETAIL60" className="mt-2 text-xl" />
-                <CheckoutButton className="mt-7 w-full">CLAIM 60% OFF →</CheckoutButton>
-                <p className="mt-4 text-center text-xs text-muted-foreground">
-                  Available only for the first 100 eligible purchases.
-                </p>
-              </div>
-            </Reveal>
-
-            <Reveal delay={120}>
-              <div className="surface-card h-full rounded-3xl p-8">
-                <p className="text-xs font-bold tracking-[0.2em] text-muted-foreground uppercase">
-                  Next 100 Buyers
-                </p>
-                <p className="mt-3 font-display text-5xl font-extrabold text-foreground/90">
-                  ⚡ 40% OFF
-                </p>
-                <p className="mt-6 text-xs font-semibold tracking-[0.2em] text-muted-foreground uppercase">
-                  Coupon Code
-                </p>
-                <CouponCode code="RETAIL40" className="mt-2 text-xl" />
-                <CheckoutButton variant="outline" className="mt-7 w-full">
-                  CLAIM 40% OFF →
-                </CheckoutButton>
-                <p className="mt-4 text-center text-xs text-muted-foreground">
-                  Available for the next 100 eligible purchases after the first offer stage.
-                </p>
-              </div>
-            </Reveal>
-          </div>
-
           <Reveal delay={100}>
-            <div className="mt-10 rounded-2xl border border-border bg-surface/60 p-6 text-center">
+            <div className="glow-ring relative mt-14 rounded-3xl border border-gold/40 bg-[image:var(--gradient-surface)] p-8 text-center">
+              <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-[image:var(--gradient-gold)] px-4 py-1 text-[11px] font-extrabold tracking-[0.15em] text-primary-foreground uppercase">
+                Best Launch Offer
+              </span>
+
               <p className="text-xs font-bold tracking-[0.2em] text-muted-foreground uppercase">
-                After the first 200 purchases
+                Launch Price
               </p>
-              <p className="mt-2 text-sm text-foreground/85">
-                Launch coupons end and regular pricing applies.
+              <p className="mt-3 font-display text-6xl font-extrabold text-gradient-gold">₹2,299</p>
+              <p className="mt-2 text-sm text-muted-foreground line-through">₹10,495</p>
+
+              <div className="mx-auto mt-6 inline-flex items-center gap-2 rounded-full bg-ember/10 px-4 py-2 text-sm font-bold text-ember">
+                <Flame className="size-4" aria-hidden />
+                Save ₹8,196 (78% OFF)
+              </div>
+
+              <p className="mt-8 text-xs font-semibold tracking-[0.2em] text-muted-foreground uppercase">
+                Use Coupon Code at Checkout
+              </p>
+              <div className="mt-3 flex justify-center">
+                <CouponCode code="RETAIL60" className="text-xl" />
+              </div>
+
+              <CheckoutButton className="mt-8 w-full">
+                🔥 CLAIM MY 78% OFF ACCESS →
+              </CheckoutButton>
+              <p className="mt-4 text-center text-xs text-muted-foreground">
+                Limited to the first 100 eligible buyers. After that, the next launch stage applies.
               </p>
             </div>
           </Reveal>
 
           <Reveal delay={140}>
+            <div className="mt-8 rounded-2xl border border-border bg-surface/60 p-6 text-center">
+              <p className="text-xs font-bold tracking-[0.2em] text-muted-foreground uppercase">
+                Missed the first 100?
+              </p>
+                <p className="mt-2 text-sm text-foreground/85">
+                Use coupon <span className="font-bold text-gold">RETAIL40</span> for the next launch stage before regular pricing returns.
+              </p>
+            </div>
+          </Reveal>
+
+          <Reveal delay={180}>
             <div className="mt-6 rounded-2xl border border-ember/40 bg-ember/10 p-6 text-center">
               <p className="font-display text-base font-bold sm:text-lg">
                 DON'T WAIT FOR THE BETTER OFFER TO DISAPPEAR.
