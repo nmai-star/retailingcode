@@ -251,6 +251,10 @@ const faqs = [
     q: "Does buying this course guarantee sales or income?",
     a: "No. This course provides education, frameworks and implementation resources. Sales, customer acquisition and income are not guaranteed and depend on individual execution and other factors.",
   },
+  {
+    q: "How can I get support?",
+    a: "Reach out via email at nmaisupport@gmail.com or WhatsApp at +91 77187 07024. Our team typically responds within 24-48 hours.",
+  },
 ];
 
 function Landing() {
