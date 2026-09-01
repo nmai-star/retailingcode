@@ -727,6 +727,7 @@ function Landing() {
                 ["30-Day Retailing Action Planner", "₹999"],
                 ["Retailing Scripts & Content Kit", "₹1,499"],
                 ["Retailing AI Assistant", "₹1,999"],
+                ["Retailing Growth Resource Pack", "₹2,999"],
               ].map(([name, price]) => (
                 <div
                   key={name}
@@ -739,19 +740,30 @@ function Landing() {
                   <span className="font-display font-bold">{price}</span>
                 </div>
               ))}
-              <div className="mt-6 flex items-center justify-between">
+              <div className="mt-6 flex items-center justify-between border-b border-gold/20 pb-6">
                 <span className="text-xs font-bold tracking-[0.2em] text-muted-foreground uppercase">
-                  Total Value
+                  Total Package Value
                 </span>
                 <span className="font-display text-3xl font-extrabold text-gradient-gold">
-                  ₹7,496
+                  ₹10,495
                 </span>
+              </div>
+              <div className="mt-6 flex flex-col items-center gap-3 text-center sm:flex-row sm:justify-between">
+                <div className="text-left">
+                  <p className="text-xs font-bold tracking-[0.2em] text-gold uppercase">
+                    Launch Offer Price
+                  </p>
+                  <p className="mt-1 font-display text-4xl font-extrabold text-foreground">₹2,299</p>
+                </div>
+                <div className="rounded-full bg-ember/10 px-4 py-2 text-sm font-bold text-ember">
+                  Save ₹8,196 (78% OFF)
+                </div>
               </div>
             </div>
           </Reveal>
           <Reveal delay={180}>
             <p className="mt-8 text-center font-display text-lg font-bold tracking-wide text-gold">
-              BUT THERE'S A LAUNCH OFFER…
+              LIMITED LAUNCH SLOTS — LOCK IN THE 78% OFF PRICE NOW
             </p>
           </Reveal>
         </div>
