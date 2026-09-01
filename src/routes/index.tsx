@@ -12,9 +12,11 @@ import {
   Flame,
   Gift,
   HeartHandshake,
+  Instagram,
   Layers,
   Mail,
   MessageSquare,
+  Play,
   Repeat,
   Search,
   Share2,
@@ -22,6 +24,7 @@ import {
   Sparkles,
   Users,
   Video,
+  Youtube,
   Zap,
 } from "lucide-react";
 import {
