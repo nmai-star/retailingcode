@@ -15,7 +15,6 @@ import {
   Layers,
   Mail,
   MessageSquare,
-  Phone,
   Repeat,
   Search,
   Share2,
