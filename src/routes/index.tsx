@@ -720,7 +720,7 @@ function Landing() {
                 Combined Extra Bonus Value: <span className="text-gradient-gold">₹2,999</span>
               </p>
               <p className="mt-2 text-sm text-muted-foreground">
-                These resources help you start conversations faster across WhatsApp, YouTube and Instagram.
+                These resources help you start conversations faster across WhatsApp, YouTube, Instagram and Google Business Profile.
               </p>
             </div>
           </Reveal>
