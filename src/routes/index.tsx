@@ -234,7 +234,7 @@ const faqs = [
   },
   {
     q: "What bonuses are included?",
-    a: "You'll receive the 30-Day Retailing Action Planner, the Retailing Scripts & Content Kit, the Retailing AI Assistant, and the Extra Bonuses including the Retailing Growth Resource Pack (200 WhatsApp Scripts, 50 YouTube Ideas & 50 Instagram Ideas).",
+    a: "You'll receive the 30-Day Retailing Action Planner, the Retailing Scripts & Content Kit, the Retailing AI Assistant, and the Extra Bonuses including the Retailing Growth Resource Pack (200 WhatsApp Scripts, 50 YouTube Ideas, 50 Instagram Ideas, GMB Setup Using PC and GMB Setup Using Mobile).",
   },
   {
     q: "How do I use the launch coupon?",
