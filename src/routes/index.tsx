@@ -1022,24 +1022,26 @@ function Landing() {
                 THE RETAILING CODE
               </p>
               <p className="mt-2 text-center text-sm text-muted-foreground">
-                 Course + 30-Day Planner + Scripts Kit + Retailing AI Assistant
-               </p>
-               <p className="mt-4 text-center text-xs font-bold tracking-[0.2em] text-gold uppercase">
-                Total Value: ₹7,496
+                Course + 3 Core Bonuses + Extra Retailing Growth Resource Pack
               </p>
+              <div className="mt-6 flex flex-col items-center justify-center gap-2 sm:flex-row sm:gap-4">
+                <p className="text-center text-xs font-bold tracking-[0.2em] text-muted-foreground uppercase line-through">
+                  Total Value: ₹10,495
+                </p>
+                <span className="hidden text-border sm:inline">|</span>
+                <p className="text-center text-xs font-bold tracking-[0.2em] text-gold uppercase">
+                  Launch Price: ₹2,299
+                </p>
+              </div>
 
-              <div className="mt-8 grid gap-4 sm:grid-cols-2">
-                <div className="rounded-2xl border border-gold/40 bg-gold/10 p-5 text-center">
-                  <p className="text-xs font-bold tracking-[0.15em] uppercase">🔥 First 100</p>
-                  <p className="mt-2 font-display text-2xl font-extrabold text-gradient-gold">
-                    60% OFF
-                  </p>
-                  <CouponCode code="RETAIL60" className="mt-3 text-base" />
-                </div>
-                <div className="rounded-2xl border border-border bg-background/40 p-5 text-center">
-                  <p className="text-xs font-bold tracking-[0.15em] uppercase">⚡ Next 100</p>
-                  <p className="mt-2 font-display text-2xl font-extrabold">40% OFF</p>
-                  <CouponCode code="RETAIL40" className="mt-3 text-base" />
+              <div className="mt-8 rounded-2xl border border-gold/40 bg-gold/10 p-6 text-center">
+                <p className="text-xs font-bold tracking-[0.15em] uppercase">🔥 Limited Launch Offer</p>
+                <p className="mt-2 font-display text-4xl font-extrabold text-gradient-gold">78% OFF</p>
+                <p className="mt-2 text-sm text-muted-foreground">
+                  You save ₹8,196 instantly
+                </p>
+                <div className="mt-4 flex justify-center">
+                  <CouponCode code="RETAIL60" className="text-base" />
                 </div>
               </div>
 
