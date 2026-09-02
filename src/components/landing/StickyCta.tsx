@@ -19,11 +19,12 @@ export function StickyCta() {
         show ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-full opacity-0",
       )}
     >
-      <div className="border-t border-border bg-background/85 px-4 py-3 backdrop-blur-xl">
+        <div className="border-t border-border bg-background/85 px-4 py-3 backdrop-blur-xl">
         <div className="mx-auto flex max-w-5xl items-center justify-between gap-4">
           <p className="hidden text-sm font-semibold sm:block">
             The Retailing Code{" "}
-            <span className="text-muted-foreground">| Launch Offer Available</span>
+            <span className="text-muted-foreground">| Launch Offer @ ₹2,299</span>
+            <span className="ml-2 text-xs font-bold text-ember">(78% OFF)</span>
           </p>
           <a
             href={CHECKOUT_URL}
