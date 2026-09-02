@@ -16,11 +16,14 @@ import {
   Layers,
   Mail,
   MessageSquare,
+  Monitor,
+  Phone,
   Play,
   Repeat,
   Search,
   Share2,
   ShieldAlert,
+  Smartphone,
   Sparkles,
   Users,
   Video,
@@ -231,7 +234,7 @@ const faqs = [
   },
   {
     q: "What bonuses are included?",
-    a: "You'll receive the 30-Day Retailing Action Planner, the Retailing Scripts & Content Kit, the Retailing AI Assistant, and the Extra Bonuses including the Retailing Growth Resource Pack (200 WhatsApp Scripts, 50 YouTube Ideas & 50 Instagram Ideas).",
+    a: "You'll receive the 30-Day Retailing Action Planner, the Retailing Scripts & Content Kit, the Retailing AI Assistant, and the Extra Bonuses including the Retailing Growth Resource Pack (200 WhatsApp Scripts, 50 YouTube Ideas, 50 Instagram Ideas, GMB Setup Using PC and GMB Setup Using Mobile).",
   },
   {
     q: "How do I use the launch coupon?",
@@ -274,6 +277,16 @@ const extraBonuses = [
     title: "50 Instagram Post Ideas",
     Icon: Instagram,
     copy: "Engaging post, reel and story ideas to keep your audience interested and drive consistent retailing conversations.",
+  },
+  {
+    title: "GMB Setup Using PC For Retailing",
+    Icon: Monitor,
+    copy: "Step-by-step Google Business Profile setup on desktop so local prospects can find and contact you directly.",
+  },
+  {
+    title: "GMB Setup Using Mobile For Retailing",
+    Icon: Smartphone,
+    copy: "Complete mobile-based GMB setup guide to manage your business profile and generate enquiries from your phone.",
   },
 ];
 
@@ -707,7 +720,7 @@ function Landing() {
                 Combined Extra Bonus Value: <span className="text-gradient-gold">₹2,999</span>
               </p>
               <p className="mt-2 text-sm text-muted-foreground">
-                These resources help you start conversations faster across WhatsApp, YouTube and Instagram.
+                These resources help you start conversations faster across WhatsApp, YouTube, Instagram and Google Business Profile.
               </p>
             </div>
           </Reveal>
