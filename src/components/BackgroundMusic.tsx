@@ -9,6 +9,9 @@ export function BackgroundMusic() {
   const userMutedRef = useRef(false);
   const videoPlayingRef = useRef(0);
   const [isPlaying, setIsPlaying] = useState(false);
+  // True when the browser blocked autoplay and the visitor still hasn't
+  // started the music — the button then pulses with a "Tap for sound" cue.
+  const [needsUnlock, setNeedsUnlock] = useState(false);
 
   useEffect(() => {
     const audio = audioRef.current;
@@ -20,8 +23,14 @@ export function BackgroundMusic() {
       if (userMutedRef.current || videoPlayingRef.current > 0) return;
       audio
         .play()
-        .then(() => setIsPlaying(true))
-        .catch(() => setIsPlaying(false));
+        .then(() => {
+          setIsPlaying(true);
+          setNeedsUnlock(false);
+        })
+        .catch(() => {
+          setIsPlaying(false);
+          setNeedsUnlock(true);
+        });
     };
 
     // Try to start the music as soon as the page loads. Browsers that block
@@ -46,10 +55,7 @@ export function BackgroundMusic() {
       if (!(event.target instanceof HTMLVideoElement)) return;
       videoPlayingRef.current = Math.max(0, videoPlayingRef.current - 1);
       if (videoPlayingRef.current === 0 && !userMutedRef.current) {
-        audio
-          .play()
-          .then(() => setIsPlaying(true))
-          .catch(() => setIsPlaying(false));
+        tryPlay();
       }
     };
     document.addEventListener("play", onVideoPlay, true);
@@ -73,6 +79,7 @@ export function BackgroundMusic() {
       userMutedRef.current = true;
       audio.pause();
       setIsPlaying(false);
+      setNeedsUnlock(false);
       return;
     }
 
@@ -81,8 +88,10 @@ export function BackgroundMusic() {
     try {
       await audio.play();
       setIsPlaying(true);
+      setNeedsUnlock(false);
     } catch {
       setIsPlaying(false);
+id      setNeedsUnlock(true);
     }
   };
 
@@ -95,12 +104,27 @@ export function BackgroundMusic() {
         onClick={toggleMusic}
         aria-label={isPlaying ? "Turn background music off" : "Turn background music on"}
         aria-pressed={isPlaying}
-        className="h-11 gap-2 rounded-full border-gold/40 bg-background/90 px-3 text-foreground shadow-lg backdrop-blur-xl hover:border-gold/70 hover:bg-surface sm:px-4"
+        className={`h-11 gap-2 rounded-full border-gold/40 bg-background/90 px-3 text-foreground shadow-lg backdrop-blur-xl transition-colors hover:border-gold/70 hover:bg-surface sm:px-4 ${
+          needsUnlock
+            ? "border-gold/70 animate-pulse motion-reduce:animate-none"
+            : ""
+        }`}
       >
         <span className="relative flex size-6 items-center justify-center rounded-full bg-gold/15 text-gold">
-          <Music2 className={isPlaying ? "animate-pulse" : ""} aria-hidden="true" />
+          {needsUnlock && (
+            <span
+              className="absolute inset-0 rounded-full bg-gold/40 animate-ping motion-reduce:animate-none"
+              aria-hidden="true"
+            />
+          )}
+          <Music2
+            className={`relative ${isPlaying ? "animate-pulse motion-reduce:animate-none" : ""}`}
+            aria-hidden="true"
+          />
         </span>
-        <span className="text-xs font-bold">Music {isPlaying ? "On" : "Off"}</span>
+        <span className="text-xs font-bold">
+          {needsUnlock ? "Tap for sound" : `Music ${isPlaying ? "On" : "Off"}`}
+        </span>
         {isPlaying ? (
           <Volume2 className="text-gold" aria-hidden="true" />
         ) : (
