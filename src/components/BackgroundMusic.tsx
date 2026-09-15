@@ -91,7 +91,7 @@ export function BackgroundMusic() {
       setNeedsUnlock(false);
     } catch {
       setIsPlaying(false);
-id      setNeedsUnlock(true);
+      setNeedsUnlock(true);
     }
   };
 
