@@ -296,6 +296,7 @@ function Landing() {
   return (
     <main className="overflow-x-hidden pb-24">
       <GlowCursor />
+      <SoundEffects />
       <BackgroundMusic />
       {/* TOP OFFER BANNER */}
       <section className="relative z-10 border-b border-gold/20 bg-[image:var(--gradient-surface)] px-4 py-4">
