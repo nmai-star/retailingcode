@@ -21,7 +21,7 @@ export function CheckoutButton({
       target="_blank"
       rel="noopener noreferrer"
       className={cn(
-        "inline-flex items-center justify-center gap-2 rounded-full font-semibold tracking-tight transition-all duration-300 active:scale-[0.98]",
+        "shine inline-flex items-center justify-center gap-2 rounded-full font-semibold tracking-tight transition-all duration-300 active:scale-[0.98]",
         size === "lg" ? "px-8 py-4 text-base sm:text-lg" : "px-5 py-3 text-sm",
         variant === "gold"
           ? "bg-[image:var(--gradient-gold)] text-primary-foreground glow-ring hover:brightness-110 hover:-translate-y-0.5"
