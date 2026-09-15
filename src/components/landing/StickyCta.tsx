@@ -30,7 +30,7 @@ export function StickyCta() {
             href={CHECKOUT_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[image:var(--gradient-gold)] px-6 py-3 text-sm font-bold text-primary-foreground transition-all hover:brightness-110 sm:w-auto"
+            className="shine inline-flex w-full items-center justify-center gap-2 rounded-full bg-[image:var(--gradient-gold)] px-6 py-3 text-sm font-bold text-primary-foreground transition-all hover:brightness-110 sm:w-auto"
           >
             <span className="sm:hidden">🔥 GET LAUNCH OFFER</span>
             <span className="hidden sm:inline">GET ACCESS →</span>
