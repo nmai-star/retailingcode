@@ -81,7 +81,7 @@ export function CouponCode({ code, className }: { code: string; className?: stri
       onClick={copy}
       aria-label={`Copy coupon code ${code}`}
       className={cn(
-        "group inline-flex items-center gap-3 rounded-xl border border-dashed border-gold/50 bg-background/60 px-5 py-3 font-display text-lg font-bold tracking-[0.18em] text-gold transition-colors hover:bg-gold/10",
+        "group coupon-highlight shine relative inline-flex items-center gap-3 rounded-xl border border-dashed border-gold/70 bg-[color-mix(in_oklab,var(--gold)_14%,var(--background))] px-5 py-3 font-display text-lg font-bold tracking-[0.18em] text-gold transition-colors hover:bg-gold/20",
         className,
       )}
     >
