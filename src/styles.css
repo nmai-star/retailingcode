@@ -213,4 +213,11 @@
     transform: none;
     transition: none;
   }
+  .shine::after,
+  .coupon-highlight {
+    animation: none;
+  }
+  .shine::after {
+    display: none;
+  }
 }
