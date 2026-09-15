@@ -21,7 +21,7 @@ export function CheckoutButton({
       target="_blank"
       rel="noopener noreferrer"
       className={cn(
-        "inline-flex items-center justify-center gap-2 rounded-full font-semibold tracking-tight transition-all duration-300 active:scale-[0.98]",
+        "shine inline-flex items-center justify-center gap-2 rounded-full font-semibold tracking-tight transition-all duration-300 active:scale-[0.98]",
         size === "lg" ? "px-8 py-4 text-base sm:text-lg" : "px-5 py-3 text-sm",
         variant === "gold"
           ? "bg-[image:var(--gradient-gold)] text-primary-foreground glow-ring hover:brightness-110 hover:-translate-y-0.5"
@@ -81,7 +81,7 @@ export function CouponCode({ code, className }: { code: string; className?: stri
       onClick={copy}
       aria-label={`Copy coupon code ${code}`}
       className={cn(
-        "group inline-flex items-center gap-3 rounded-xl border border-dashed border-gold/50 bg-background/60 px-5 py-3 font-display text-lg font-bold tracking-[0.18em] text-gold transition-colors hover:bg-gold/10",
+        "group coupon-highlight shine relative inline-flex items-center gap-3 rounded-xl border border-dashed border-gold/70 bg-[color-mix(in_oklab,var(--gold)_14%,var(--background))] px-5 py-3 font-display text-lg font-bold tracking-[0.18em] text-gold transition-colors hover:bg-gold/20",
         className,
       )}
     >

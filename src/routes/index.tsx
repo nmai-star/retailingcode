@@ -37,6 +37,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { GlowCursor } from "@/components/GlowCursor";
+import { SoundEffects } from "@/components/SoundEffects";
 import { BackgroundMusic } from "@/components/BackgroundMusic";
 import { Reveal } from "@/components/Reveal";
 import { StickyCta } from "@/components/landing/StickyCta";
@@ -295,6 +296,7 @@ function Landing() {
   return (
     <main className="overflow-x-hidden pb-24">
       <GlowCursor />
+      <SoundEffects />
       <BackgroundMusic />
       {/* TOP OFFER BANNER */}
       <section className="relative z-10 border-b border-gold/20 bg-[image:var(--gradient-surface)] px-4 py-4">

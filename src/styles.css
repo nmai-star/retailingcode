@@ -142,6 +142,55 @@
   box-shadow: var(--shadow-glow);
 }
 
+/* Premium travelling sheen across buttons */
+@keyframes shine-sweep {
+  0% {
+    transform: translateX(-140%) skewX(-18deg);
+  }
+  60%,
+  100% {
+    transform: translateX(240%) skewX(-18deg);
+  }
+}
+
+@keyframes coupon-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 color-mix(in oklab, var(--gold) 45%, transparent);
+  }
+  50% {
+    box-shadow: 0 0 26px 3px color-mix(in oklab, var(--gold) 38%, transparent);
+  }
+}
+
+@utility shine {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.shine::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  bottom: -50%;
+  left: 0;
+  width: 45%;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    color-mix(in oklab, white 65%, transparent),
+    transparent
+  );
+  animation: shine-sweep 3.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@utility coupon-highlight {
+  animation: coupon-glow 2.4s ease-in-out infinite;
+}
+
 @utility reveal {
   opacity: 0;
   transform: translateY(24px);
@@ -163,5 +212,12 @@
     opacity: 1;
     transform: none;
     transition: none;
+  }
+  .shine::after,
+  .coupon-highlight {
+    animation: none;
+  }
+  .shine::after {
+    display: none;
   }
 }
