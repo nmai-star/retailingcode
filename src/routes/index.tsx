@@ -37,6 +37,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { GlowCursor } from "@/components/GlowCursor";
+import { SoundEffects } from "@/components/SoundEffects";
 import { BackgroundMusic } from "@/components/BackgroundMusic";
 import { Reveal } from "@/components/Reveal";
 import { StickyCta } from "@/components/landing/StickyCta";
