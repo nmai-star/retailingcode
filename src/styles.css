@@ -217,6 +217,17 @@
   .coupon-highlight {
     animation: none;
   }
+  .group:hover > .contents > span,
+  .group:focus-visible > .contents > span {
+    filter: none;
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .group:hover > .contents > span[aria-hidden="true"],
+  .group:focus-visible > .contents > span[aria-hidden="true"] {
+    display: none;
+  }
   .shine::after {
     display: none;
   }
