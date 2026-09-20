@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { CHECKOUT_URL } from "./shared";
+import { RectangleButtons } from "./RectangleButtons";
 import { cn } from "@/lib/utils";
 
 export function StickyCta() {
@@ -30,10 +31,12 @@ export function StickyCta() {
             href={CHECKOUT_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="shine inline-flex w-full items-center justify-center gap-2 rounded-full bg-[image:var(--gradient-gold)] px-6 py-3 text-sm font-bold text-primary-foreground transition-all hover:brightness-110 sm:w-auto"
+            className="group shine inline-flex w-full items-center justify-center gap-2 rounded-full bg-[image:var(--gradient-gold)] px-6 py-3 text-sm font-bold text-primary-foreground transition-all duration-[1000ms] ease-[cubic-bezier(0.15,0.83,0.66,1)] hover:-translate-y-[3px] hover:brightness-110 sm:w-auto"
           >
-            <span className="sm:hidden">🔥 GET LAUNCH OFFER</span>
-            <span className="hidden sm:inline">GET ACCESS →</span>
+            <RectangleButtons variant="sliding-text-cta">
+              <span className="sm:hidden">🔥 GET LAUNCH OFFER</span>
+              <span className="hidden sm:inline">GET ACCESS →</span>
+            </RectangleButtons>
           </a>
         </div>
       </div>

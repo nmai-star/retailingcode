@@ -1,6 +1,7 @@
 import { useState, type ReactNode } from "react";
 import { Check, Copy } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { RectangleButtons } from "./RectangleButtons";
 
 export const CHECKOUT_URL = "https://tagmango.com/web/checkout/6a91a7c53df99900843bfcca";
 
@@ -21,7 +22,7 @@ export function CheckoutButton({
       target="_blank"
       rel="noopener noreferrer"
       className={cn(
-        "shine inline-flex items-center justify-center gap-2 rounded-full font-semibold tracking-tight transition-all duration-300 active:scale-[0.98]",
+        "group shine inline-flex items-center justify-center gap-2 rounded-full font-semibold tracking-tight transition-all duration-[1000ms] ease-[cubic-bezier(0.15,0.83,0.66,1)] hover:-translate-y-[3px] active:scale-[0.98]",
         size === "lg" ? "px-8 py-4 text-base sm:text-lg" : "px-5 py-3 text-sm",
         variant === "gold"
           ? "bg-[image:var(--gradient-gold)] text-primary-foreground glow-ring hover:brightness-110 hover:-translate-y-0.5"
@@ -29,7 +30,7 @@ export function CheckoutButton({
         className,
       )}
     >
-      {children}
+      <RectangleButtons variant="sliding-text-cta">{children}</RectangleButtons>
     </a>
   );
 }
